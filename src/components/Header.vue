@@ -1,7 +1,10 @@
 <template>
-  <header>
-    <h1>Andy Vaic</h1>
-  </header>
+  <div class="header">
+    <header>
+      <h2>Mylėsiu tave, net jei žemės nebebus</h2>
+    </header>
+    <div class="triangle"></div>
+  </div>
 </template>
 
 <script>
@@ -16,7 +19,28 @@ header {
   background-image: url("../assets/andy_vaic_1.jpg");
   background-size: cover;
   background-attachment: fixed;
-  padding: 10px;
   box-sizing: border-box;
+  position: relative;
+}
+
+h2 {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  transform: translate(0, -50%);
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.5em 0.6em;
+  margin: 0;
+}
+
+.triangle {
+  height: 150px;
+  position: relative;
+  top: -140px;
+  left: -50vw;
+  background: white;
+  transform: rotate(10deg);
 }
 </style>
