@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .navigation {
   padding: 0 1em;
   display: flex;

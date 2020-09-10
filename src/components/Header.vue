@@ -36,11 +36,13 @@ h2 {
 }
 
 .triangle {
-  height: 150px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 80px 100vw;
+  border-color: transparent transparent transparent #fff;
+  transform: rotateX(180deg);
   position: relative;
-  top: -140px;
-  left: -50vw;
-  background: white;
-  transform: rotate(10deg);
+  top: -80px;
 }
 </style>

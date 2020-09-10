@@ -5,9 +5,7 @@
       <div class="song" v-for="song in songs" :key="song.id">
         <h4 class="title">{{ song.Title }}</h4>
         <audio controls>
-          <source
-            src="http://161.35.199.153:1337/uploads/Kujeliai_Uz_Tukstancio_Duru_Sofar_Vilnius_4818b764c4.mp3"
-          />
+          <source :src="baseURL + song.Song.url" />
           Your browser does not support this audio player
         </audio>
       </div>
@@ -21,6 +19,7 @@ export default {
   data() {
     return {
       songs: [],
+      baseURL: process.env.VUE_APP_BASE_URL,
     };
   },
   beforeMount() {
@@ -40,10 +39,24 @@ export default {
 }
 
 .song {
-  border: 1px solid red;
+  background: rgba(164, 205, 209, 0.5);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);
   width: calc(50% - 10px);
   margin: 10px;
   padding: 20px;
   box-sizing: border-box;
+}
+
+h3 {
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+audio {
+  width: 100%;
 }
 </style>
